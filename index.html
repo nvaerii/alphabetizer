@@ -19,58 +19,56 @@
 
         h1 {
             text-align: center;
-            margin-bottom: 10px;
-            font-size: 1.2em;
+            margin-bottom: 20px;
         }
 
         .container {
             background-color: #000000; /* Black container background */
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-            max-width: 150px; /* Adjusted for Notion */
-            width: 80%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            max-width: 200px;
+            width: 100%;
         }
 
         textarea {
-            width: 100%;
-            height: 80px;
-            padding: 5px;
+            width: 90%;
+            height: 100px;
+            padding: 10px;
             border: none;
             border-radius: 5px;
-            margin-bottom: 10px;
-            font-size: 0.9em;
+            margin-bottom: 15px;
+            margin-right: 10px;
+            font-size: 1em;
             resize: none;
         }
 
         button {
-            background-color: #007bff; /* Blue button */
+            background-color: #004793; /* Blue button */
             color: #ffffff;
             border: none;
-            padding: 8px 15px;
+            padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 0.9em;
+            font-size: 1em;
             transition: background-color 0.3s;
         }
 
         button:hover {
-            background-color: #0056b3; /* Darker blue on hover */
+            background-color: #002955; /* Darker blue on hover */
         }
 
         .result {
-            margin-top: 10px;
-            padding: 8px;
+            margin-top: 15px;
+            padding: 10px;
             background-color: #001f3f;
-            border: 1px solid #007bff;
+            border: 1px solid #002955;
             border-radius: 5px;
-            font-size: 0.9em;
-            word-wrap: break-word;
         }
     </style>
 </head>
 <body>
-    <h1>Alphabetizer</h1>
+    <h1>Alphabetize Your List</h1>
     <div class="container">
         <textarea id="input" placeholder="Enter items separated by commas..."></textarea>
         <button onclick="alphabetizeList()">Alphabetize</button>
