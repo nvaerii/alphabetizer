@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabetizer</title>
+    <style>
+        body {
+            background-color: #001f3f; /* Deep blue background */
+            color: #ffffff; /* White text color */
+            font-family: 'Poppins', sans-serif; /* Aesthetic font */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            background-color: #000000; /* Black container background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 90%;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 1em;
+            resize: none;
+        }
+
+        button {
+            background-color: #004793; /* Blue button */
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #002955; /* Darker blue on hover */
+        }
+
+        .result {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #001f3f;
+            border: 1px solid #002955;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alphabetize Your List</h1>
+    <div class="container">
+        <textarea id="input" placeholder="Enter items separated by commas..."></textarea>
+        <button onclick="alphabetizeList()">Alphabetize</button>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        function alphabetizeList() {
+            const input = document.getElementById('input').value;
+            if (!input.trim()) {
+                document.getElementById('result').innerText = 'Please enter a valid list.';
+                return;
+            }
+            const items = input.split(',').map(item => item.trim());
+            const sortedItems = items.sort((a, b) => a.localeCompare(b));
+            document.getElementById('result').innerText = sortedItems.join(', ');
+        }
+    </script>
+</body>
+</html>
